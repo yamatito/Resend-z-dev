@@ -11,8 +11,7 @@ import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 
-
-import { useState } from 'react'
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 
 function TextInput({
   label,
@@ -66,7 +65,7 @@ function ContactForm() {
     message: '',
     budget: '',
   });
-  const onSubmitHandler = async (e) => {
+  const onSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Log form data before sending the POST request
@@ -86,7 +85,7 @@ function ContactForm() {
     setPostedData(data.body);
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
 
     const { name, value } = e.target;
     setFormData((prevData) => ({

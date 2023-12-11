@@ -72,21 +72,22 @@ function ContactForm() {
     // Log form data before sending the POST request
     console.log('Form Data:', formData);
 
-    // const res = await fetch('/api/send', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({ formData }),
-    // });
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ formData }),
+    });
    
     
 
-    // const data = await res.json();
-    // setPostedData(data.body);
+    const data = await res.json();
+    setPostedData(data.body);
   };
 
   const handleInputChange = (e) => {
+
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,

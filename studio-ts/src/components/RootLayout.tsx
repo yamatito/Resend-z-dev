@@ -143,12 +143,12 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/work">実績</NavigationItem>
+        <NavigationItem href="/about">会社概要s</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/process">事業紹介</NavigationItem>
+        <NavigationItem href="/blog">ブログ</NavigationItem>
       </NavigationRow>
     </nav>
   )

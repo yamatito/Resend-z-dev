@@ -24,6 +24,8 @@ import imageMichaelFoster from '@/images/team/michael-foster.jpg'
 import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import { loadArticles } from '@/lib/mdx'
 
+
+
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
@@ -177,9 +179,47 @@ function Team() {
     </Container>
   )
 }
+const tableData = [
+  { label: '商号', value: 'z-developer 合同会社' },
+  { label: '商号２', value: 'z-developer 合同会社2' },
+  // 他のデータ項目も同様に追加
+];
+function Table() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <div className="space-y-24 lg:space-y-32">
+        <FadeIn>
+          {tableData.map((dataItem, index) => (
+            <article key={index}>
+              <Border className="pt-16">
+                <div className="relative lg:-mx-4 lg:flex lg:justify-end">
+                  <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
+                    <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
+                      <dd className="flex gap-x-4">
+                        <h4 className="font-display text-2xl font-semibold text-neutral-950">
+                          {dataItem.label}
+                        </h4>
+                      </dd>
+                    </dl>
+                    <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                      {dataItem.value}
+                    </h2>
+                  </div>
+                </div>
+              </Border>
+            </article>
+          ))}
+        </FadeIn>
+      </div>
+    </Container>
+  );
+}
+
+
+
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: '会社概要',
   description:
     'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
 }
@@ -189,36 +229,30 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="Company" title="会社概要">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          私たちは、プログラマーが主体となる効果的なアプローチを信じています。
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            プログラマーたちは経験と専門知識を蓄積し、開発プロセスを迅速かつ品質の高いものに保っています。
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            これにより、プロジェクトの開発からメンテナンスまでの一貫性が確保され、クライアントの要望に的確に対応できるのです。
+            これが私たちのアプローチの中心にある考え方であり、クライアントの期待を超える価値を追求し続けています。
           </p>
         </div>
       </PageIntro>
-      <Container className="mt-16">
+      {/* <Container className="mt-16">
         <StatList>
           <StatListItem value="35" label="Underpaid employees" />
           <StatListItem value="52" label="Placated clients" />
           <StatListItem value="$25M" label="Invoices billed" />
         </StatList>
-      </Container>
+      </Container> */}
 
       <Culture />
-
+      <Table />
       <Team />
 
       <PageLinks

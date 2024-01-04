@@ -40,7 +40,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+          数百の素晴らしい方々と共同してきました。
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -71,7 +71,7 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="技術を駆使してより明るい未来を創り出す"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -128,7 +128,7 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="新しい機会を見つけ、探索し、対応するお手伝いをいたします。"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -148,12 +148,12 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
+            <ListItem title="WEB開発">
               We specialise in crafting beautiful, high quality marketing pages.
               The rest of the website will be a shell that uses lorem ipsum
               everywhere.
             </ListItem>
-            <ListItem title="Application development">
+            <ListItem title="システム開発">
               We have a team of skilled developers who are experts in the latest
               app frameworks, like Angular 1 and Google Web Toolkit.
             </ListItem>
@@ -187,12 +187,10 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+          Z世代、新たな可能性を切り拓く者たち。
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+          私たちは未来を創り出す力を持っています。テクノロジーとクリエイティビティを融合させ、新たな価値と革新的なインスピレーションを提供します。
           </p>
         </FadeIn>
       </Container>

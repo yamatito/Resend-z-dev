@@ -12,9 +12,18 @@ import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 
 import React, { useState, FormEvent, ChangeEvent } from 'react';
+interface FormData {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  message: string;
+  InquiryItem: string[]; // Explicitly define the type for the array
+}
 
 function TextInput({
   label,
+  required,
   ...props
 }: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
   let id = useId()
@@ -33,6 +42,7 @@ function TextInput({
         className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
       >
         {label}
+        {required && <span className="text-red-500">*</span>} {/* Red dot for required fields */}
       </label>
     </div>
   )
@@ -54,22 +64,41 @@ function RadioInput({
   )
 }
 
+function CheckboxInput({
+  label,
+  ...props
+}: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
+  return (
+    <label className="flex gap-x-3">
+
+      <input
+        type="checkbox"
+        {...props}
+        className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
+      />
+      <span className="text-base/6 text-neutral-950">{label}</span>
+    </label>
+  );
+}
+
 
 function ContactForm() {
   const [postedData, setPostedData] = useState('')
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
     phone: '',
     message: '',
-    budget: '',
+    InquiryItem: [],
   });
   const onSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Log form data before sending the POST request
     console.log('Form Data:', formData);
+
+    console.log(formData.email);
 
     const res = await fetch('/api/send', {
       method: 'POST',
@@ -78,20 +107,29 @@ function ContactForm() {
       },
       body: JSON.stringify({ formData }),
     });
-   
-    
+
+
 
     const data = await res.json();
     setPostedData(data.body);
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
 
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    if (type === 'checkbox') {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: checked
+          ? [...prevData[name as keyof FormData], value]
+          : (prevData[name as keyof FormData] as string[]).filter((item) => item !== value),
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
 
 
@@ -100,39 +138,49 @@ function ContactForm() {
     <FadeIn className="lg:order-last">
       <form onSubmit={onSubmitHandler}>
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
+          サービスに関するお問い合わせ
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" onChange={handleInputChange} />
+          <TextInput label="お名前" name="name" autoComplete="name" onChange={handleInputChange}  />
           <TextInput
-            label="Email"
+            label="メールアドレス"
             type="email"
             name="email"
             autoComplete="email"
             onChange={handleInputChange}
+            
           />
           <TextInput
-            label="Company"
+            label="企業名"
             name="company"
             autoComplete="organization"
             onChange={handleInputChange}
+            
           />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel"  onChange={handleInputChange}/>
-          <TextInput label="Message" name="message" onChange={handleInputChange}/>
+          <TextInput label="電話番号" type="tel" name="phone" autoComplete="tel" onChange={handleInputChange}  />
+          <TextInput label="お問い合わせ内容" name="message" onChange={handleInputChange}  />
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
-              <legend className="text-base/6 text-neutral-500">Budget</legend>
-              <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K - $50K" name="budget" value="25"  onChange={handleInputChange}/>
-                <RadioInput label="$50K - $100K" name="budget" value="50"  onChange={handleInputChange}/>
-                <RadioInput label="$100K - $150K" name="budget" value="100"  onChange={handleInputChange}/>
-                <RadioInput label="More than $150K" name="budget" value="150"  onChange={handleInputChange}/>
+              <div className="flex">
+              <legend className="text-base/6 text-neutral-500">お問い合わせ項目</legend>
+              <span aria-hidden="true" className="text-red-500">*</span>
+              <span className="sr-only">Required</span>
               </div>
+         
+
+              <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <CheckboxInput label="WEB制作・運用改善" name="InquiryItem" value="WEB制作・運用改善" onChange={handleInputChange} />
+                <CheckboxInput label="中洲Vision" name="InquiryItem" value="中洲Vision" onChange={handleInputChange} />
+                <CheckboxInput label="システム開発" name="InquiryItem" value="システム開発" onChange={handleInputChange} />
+                <CheckboxInput label="ITコンサル" name="InquiryItem" value="ITコンサル" onChange={handleInputChange} />
+                <CheckboxInput label="その他" name="InquiryItem" value="その他" onChange={handleInputChange} />
+              </div>
+
             </fieldset>
           </div>
         </div>
         <Button type="submit" className="mt-10">
-          Let’s work together
+          送信する
         </Button>
       </form>
     </FadeIn>

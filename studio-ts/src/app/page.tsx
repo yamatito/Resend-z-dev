@@ -75,9 +75,7 @@ function CaseStudies({
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+        ウェブ開発、アプリケーション設計、デジタルコンテンツ制作から、屋外デジタルサイネージ広告まで、あらゆるニーズにお応えします。
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -132,8 +130,7 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+        私たちはクライアント様の可能性を広げるために、最適な戦略とソリューションを提供します。
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -149,23 +146,16 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="WEB開発">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            カスタムウェブサイトの設計と開発を専門とし、ユーザーエクスペリエンスを最優先に考えたクリエイティブなソリューションを提供します。お客様のビジョンとニーズに応じた、独自性と機能性を兼ね備えたウェブサイトを実現します。
             </ListItem>
-            <ListItem title="システム開発">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="デジタルコンテンツ制作">
+            魅力的なデジタルコンテンツを通じて、ブランドのメッセージを効果的に伝えます。ビデオ制作、アニメーション、インタラクティブコンテンツなど、多岐にわたるサービスを提供します。
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="デジタルサイネージ広告">
+            中洲に位置する最先端のデジタルサイネージを活用して、目を引く広告を展開します。屋外広告における豊富な経験と実績を基に、効果的なビジュアルコンテンツを提供し、お客様のブランド価値を高めます。
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="テクノロジーコンサルティング">
+            業務のデジタル化に関するアドバイスから、最新技術の導入まで、幅広い知識と経験を活かしたコンサルティングサービスを提供します。
             </ListItem>
           </List>
         </div>
@@ -190,7 +180,7 @@ export default async function Home() {
           Z世代、新たな可能性を切り拓く者たち。
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-          私たちは未来を創り出す力を持っています。テクノロジーとクリエイティビティを融合させ、新たな価値と革新的なインスピレーションを提供します。
+          私たちは、最先端の技術と創造性を駆使して、お客様のビジネスをサポートするWEB系総合サービス企業です。
           </p>
         </FadeIn>
       </Container>

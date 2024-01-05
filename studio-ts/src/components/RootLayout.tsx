@@ -144,7 +144,7 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/work">実績</NavigationItem>
-        <NavigationItem href="/about">会社概要s</NavigationItem>
+        <NavigationItem href="/about">会社概要</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">事業紹介</NavigationItem>

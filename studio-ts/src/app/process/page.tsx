@@ -89,19 +89,11 @@ function Tappi() {
 
 function Nakasu() {
   return (
-    <Section title="中洲ビジョン" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="デジタルサイネージ広告（中洲ビジョン）" image={{ src: imageLaptop, shape: 1 }}>
     <div className="space-y-6 text-base text-neutral-600">
-      <strong className="font-semibold text-neutral-950">中洲を魅了するデジタル広告</strong>{' '}
+      <strong className="font-semibold text-neutral-950">中洲の繁華街に新たな光を。</strong>{' '}
       <p>
-        中洲サイネージ（Chucho Signage）は、九州エリアで提供するデジタル広告サービスです。
-        私たちはコンプライアンスを大事にし、繁華街での広告を革新的に展開しています。中洲サイネージは、大画面モニターを活用し、ビジュアルメディアを通じて新たな可能性を提供します。
-        私たちの使命は、コンプライアンスと革新を結びつけ、エリアの魅力を広げることです。
-      </p>
-      <p>
-        Our account managers are trained to only reply to client emails after
-        9pm, several days after the initial email. This reinforces the general
-        aura that we are very busy and dissuades clients from asking for
-        changes.
+      私たちのデジタルサイネージサービスは、魅力的な広告を通じて、お客様のメッセージを大衆に届けます。大画面モニターを活用したビジュアルコンテンツで、ブランドの認知度と魅力を高めましょう。
       </p>
     </div>
 
@@ -120,9 +112,9 @@ function BPO() {
   return (
     <Section title="業務委託" image={{ src: imageMeeting, shape: 2 }}>
     <div className="space-y-6 text-base text-neutral-600">
-      <strong className="font-semibold text-neutral-950">多彩なITプロジェクトパートナー</strong>{' '}
+      <strong className="font-semibold text-neutral-950">多彩なITプロジェクトに対応します。</strong>{' '}
       <p>
-        WEB制作、動画制作・編集、システム開発、TikTok運用、LIVE撮影、IT相談など、多岐にわたる業務委託プロジェクトへの提供。
+      WEB制作、動画制作・編集、システム開発、SNS運用、ライブ撮影、IT相談など、幅広い技術とサービスでお客様のビジネスをサポート。当社の専門チームが、高品質な成果物を提供します。
       </p>
       <p>
         We ensure that the main pages of the site are{' '}
@@ -155,6 +147,27 @@ function BPO() {
         uses, you can expect a lifetime of support, and invoices, from us.
       </ListItem>
     </List>
+  </Section>
+  )
+}
+
+function WEB() {
+  return (
+    <Section title="WEB開発" image={{ src: imageLaptop, shape: 1 }}>
+    <div className="space-y-6 text-base text-neutral-600">
+      <strong className="font-semibold text-neutral-950">ウェブはビジネスの顔です。</strong>{' '}
+      <p>
+      当社は、お客様のビジネスアイデンティティを映し出す、美しく機能的なウェブサイトの設計と開発に特化しています。クリエイティブなデザインと最新技術の融合により、訪問者の心に残るサイトを構築します。
+      </p>
+    </div>
+
+    <Blockquote
+      author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
+      className="mt-12"
+    >
+      Studio were so regular with their progress updates we almost began to
+      think they were automated!
+    </Blockquote>
   </Section>
   )
 }
@@ -213,7 +226,7 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Process',
+  title: '事業紹介',
   description:
     'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
 }
@@ -221,11 +234,11 @@ export const metadata: Metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Our business" title="事業紹介">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+        私たちは、革新と信頼性を重視し、お客様一人ひとりに合わせたカスタマイズされたソリューションを提供することで、新しい可能性を切り拓いています。
+        <br />
+        以下に、私たちの主要な事業領域をご紹介します。
         </p>
       </PageIntro>
 
@@ -233,6 +246,7 @@ export default function Process() {
         <Tappi />
         <Nakasu />
         <BPO />
+        <WEB />
       </div>
 
       <Values />

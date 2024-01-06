@@ -14,6 +14,7 @@ import { TagList, TagListItem } from '@/components/TagList'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
+import { Button } from '@/components/Button'
 
 function Section({
   title,
@@ -56,119 +57,113 @@ function Section({
 function Tappi() {
   return (
     <Section title="Tappi" image={{ src: imageWhiteboard }}>
-    <div className="space-y-6 text-base text-neutral-600">
-      <strong className="font-semibold text-neutral-950">新しい世代の起業家から生まれた</strong>{' '}
-      <p>
-        Tappiは、19歳の起業家によって開発、製作、販売されたサービスです。若い世代の情熱、創造性、そしてデジタル時代への洞察がこのプロジェクトを生み出しました。Tappiは、物理とデジタルを結びつけ、新しい可能性を切り拓くことを使命としています。若者の力強いアイデアが、私たちの日常をよりインタラクティブに変えています。
-      </p>
-      <p>
-        Our team of private investigators shadow the company director’s for
-        several weeks while our account managers focus on going through their
-        trash. Our senior security experts then perform social engineering
-        hacks to gain access to their{' '}
-        <strong className="font-semibold text-neutral-950">business</strong>{' '}
-        accounts — handing that information over to our forensic accounting
-        team.
-      </p>
-    </div>
+      <div className="space-y-6 text-base text-neutral-600">
+        <strong className="font-semibold text-neutral-950">新しい世代の起業家から生まれた</strong>{' '}
+        <p>
+          Tappiは、19歳の起業家によって開発、製作、販売されたサービスです。
+          <br />
+          若い世代の情熱、創造性、そしてデジタル時代への洞察がこのプロジェクトを生み出しました。
+        </p>
+        <p>
+          Tappiは、紙の名刺やQRコードを超えた新しいネットワーキングの形を提供し、          <strong className="font-semibold text-neutral-950">ビジネス</strong>{' '}の未来を形作ります。
+        </p>
+      </div>
 
-    <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-      Included in this phase
-    </h3>
-    <TagList className="mt-4">
-      <TagListItem>In-depth questionnaires</TagListItem>
-      <TagListItem>Feasibility studies</TagListItem>
-      <TagListItem>Blood samples</TagListItem>
-      <TagListItem>Employee surveys</TagListItem>
-      <TagListItem>Proofs-of-concept</TagListItem>
-      <TagListItem>Forensic audit</TagListItem>
-    </TagList>
-  </Section>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        活用事例
+      </h3>
+      <TagList className="mt-4">
+        <TagListItem>LINE誘導</TagListItem>
+        <TagListItem>Bar</TagListItem>
+        <TagListItem>アパレルショップ</TagListItem>
+        <TagListItem>イベント情報</TagListItem>
+        <TagListItem>物販</TagListItem>
+        <TagListItem>クーポン配布</TagListItem>
+      </TagList>
+      <div className='mt-4'>
+      <Button ><a href="https://tappi.official.ec/">ECサイトへ</a></Button>
+      </div>
+    </Section>
   )
 }
 
 function Nakasu() {
   return (
     <Section title="デジタルサイネージ広告（中洲ビジョン）" image={{ src: imageLaptop, shape: 1 }}>
-    <div className="space-y-6 text-base text-neutral-600">
-      <strong className="font-semibold text-neutral-950">中洲の繁華街に新たな光を。</strong>{' '}
-      <p>
-      私たちのデジタルサイネージサービスは、魅力的な広告を通じて、お客様のメッセージを大衆に届けます。大画面モニターを活用したビジュアルコンテンツで、ブランドの認知度と魅力を高めましょう。
-      </p>
-    </div>
-
-    <Blockquote
-      author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
-      className="mt-12"
-    >
-      Studio were so regular with their progress updates we almost began to
-      think they were automated!
-    </Blockquote>
-  </Section>
+      <div className="space-y-6 text-base text-neutral-600">
+        <strong className="font-semibold text-neutral-950">中洲の繁華街に新たな光を。</strong>{' '}
+        <p>
+        中洲ビジョンは、九州随一の歓楽街・中洲の入口、中洲川端駅の上に設置された大画面LEDビジョンです。
+        </p>
+      </div>
+      <List className="mt-8">
+        <ListItem title="リーズナブルな価格で最大のインパクト">
+        55,000円から、街の中心であなたのブランドをアピールできます。
+        私たちは、高いインパクトの映像広告を手頃な価格で提供し、あなたの予算に合わせて柔軟なプランを用意しています。インパクトのある大画面からの映像と音声で、効果的にメッセージを伝えましょう。
+        </ListItem>
+      </List>
+      <div className='mt-4'>
+      <Button ><a href="https://nakasuvision.zdev.co.jp/">申し込みサイト</a></Button>
+      </div>
+    </Section>
   )
 }
 
 function BPO() {
   return (
     <Section title="業務委託" image={{ src: imageMeeting, shape: 2 }}>
-    <div className="space-y-6 text-base text-neutral-600">
-      <strong className="font-semibold text-neutral-950">多彩なITプロジェクトに対応します。</strong>{' '}
-      <p>
-      WEB制作、動画制作・編集、システム開発、SNS運用、ライブ撮影、IT相談など、幅広い技術とサービスでお客様のビジネスをサポート。当社の専門チームが、高品質な成果物を提供します。
-      </p>
-      <p>
-        We ensure that the main pages of the site are{' '}
-        <strong className="font-semibold text-neutral-950">
-          fully functional
-        </strong>{' '}
-        at launch — the auxiliary pages will, of course, be lorem ipusm shells
-        which get updated as part of our exorbitant{' '}
-        <strong className="font-semibold text-neutral-950">
-          maintenance
-        </strong>{' '}
-        retainer.
-      </p>
-    </div>
+      <div className="space-y-6 text-base text-neutral-600">
+        <strong className="font-semibold text-neutral-950">多彩なITプロジェクトに対応します。</strong>{' '}
+        <p>
+          WEB制作、動画制作・編集、システム開発、SNS運用、ライブ撮影、IT相談など、 <strong className="font-semibold text-neutral-950">
+          幅広い技術
+          </strong>{' '}とサービスでお客様のビジネスをサポート。
+          <br />
+          当社の専門チームが、高品質な成果物を提供します。
+        </p>
+      </div>
 
-    <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-      Included in this phase
-    </h3>
-    <List className="mt-8">
-      <ListItem title="Testing">
-        Our projects always have 100% test coverage, which would be impressive
-        if our tests weren’t as porous as a sieve.
-      </ListItem>
-      <ListItem title="Infrastructure">
-        To ensure reliability we only use the best Digital Ocean droplets that
-        $4 a month can buy.
-      </ListItem>
-      <ListItem title="Support">
-        Because we hold the API keys for every critical service your business
-        uses, you can expect a lifetime of support, and invoices, from us.
-      </ListItem>
-    </List>
-  </Section>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Included in this phase
+      </h3>
+      <List className="mt-8">
+        <ListItem title="Testing">
+          Our projects always have 100% test coverage, which would be impressive
+          if our tests weren’t as porous as a sieve.
+        </ListItem>
+        <ListItem title="Infrastructure">
+          To ensure reliability we only use the best Digital Ocean droplets that
+          $4 a month can buy.
+        </ListItem>
+        <ListItem title="Support">
+          Because we hold the API keys for every critical service your business
+          uses, you can expect a lifetime of support, and invoices, from us.
+        </ListItem>
+      </List>
+    </Section>
   )
 }
 
 function WEB() {
   return (
     <Section title="WEB開発" image={{ src: imageLaptop, shape: 1 }}>
-    <div className="space-y-6 text-base text-neutral-600">
-      <strong className="font-semibold text-neutral-950">ウェブはビジネスの顔です。</strong>{' '}
-      <p>
-      当社は、お客様のビジネスアイデンティティを映し出す、美しく機能的なウェブサイトの設計と開発に特化しています。クリエイティブなデザインと最新技術の融合により、訪問者の心に残るサイトを構築します。
-      </p>
-    </div>
+      <div className="space-y-6 text-base text-neutral-600">
+        <strong className="font-semibold text-neutral-950">ウェブはビジネスの顔です。</strong>{' '}
+        <p>
+          当社は、お客様のビジネスアイデンティティを映し出す、美しく機能的なウェブサイトの設計と開発に特化しています。
+          <br />
+          クリエイティブなデザインと最新技術の融合により、訪問者の心に残るサイトを構築します。
+        </p>
+      </div>
 
-    <Blockquote
-      author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
-      className="mt-12"
-    >
-      Studio were so regular with their progress updates we almost began to
-      think they were automated!
-    </Blockquote>
-  </Section>
+      <Blockquote
+        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
+        className="mt-12"
+      >
+        Studio were so regular with their progress updates we almost began to
+        think they were automated!
+      </Blockquote>
+    </Section>
   )
 }
 
@@ -183,41 +178,35 @@ function Values() {
       </div>
 
       <SectionIntro
-   eyebrow="Our values"
-   title="私たちの価値"
+        eyebrow="Our values"
+        title="私たちの価値"
       >
-       <p>
+        <p>
           信頼性と革新の調和を大切にしています。
           <br />
           新しいトレンドや最新技術に常に注視しつつも、それを完全に取り入れず、クライアントに適した<strong className="font-semibold text-neutral-950">
             オーダーメイドのソリューション
           </strong>{' '}を提供します。
-          この決定を正当化するために、私たちは自らの中心的な価値観を堅持しています。
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
-      <GridList>
-          <GridListItem title="緻密さ">
-          最初の段階では、お客様の要望や必要な点を注意深くヒアリングし、一緒に解決策を見つけます。
-          Z世代の感性を活かし、革新的で魅力的なデザインに仕上げます。
+        <GridList>
+          <GridListItem title="精緻性 - Meticulousness">
+          私たちは細部にまで目を配り、お客様一人ひとりのニーズに合わせたカスタマイズされたソリューションを提供します。
+          <br />
+          プロジェクトの初期段階から、緻密なヒアリングと計画を行い、期待を超える成果を目指します。
           </GridListItem>
-          <GridListItem title="適応力">
-            すべてのビジネスには独自のニーズがあり、私たちの最大の強みはこれらのニーズを既存のものに柔軟に適用できることです。Z世代の柔軟性と創造性を活かし、ソリューションを提供します。
+          <GridListItem title="信頼性 - Reliability">
+          私たちはお客様のビジネスパートナーとして、信頼と誠実さをもって対応します。
+          <br />
+          プロジェクトの成功はもちろん、長期的な関係構築にも注力し、何十年にもわたって信頼できるパートナーであり続けることを約束します。
           </GridListItem>
-          <GridListItem title="忠誠心">
-          私たちは製品を提供するだけでなく、数十年にわたってクライアントとの長期的な関係を築くことを大切にしています。
-          </GridListItem>
-          <GridListItem title="革新的">
-          技術の環境は常に進化しており、私たちも変化しています。常に新しいオープンソースプロジェクトを探し求めています。
-          </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
-          </GridListItem>
-          <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+        
+          <GridListItem title="パーソナライゼーション - Personalization">
+          私たちは、一つ一つのビジネスがユニークであることを理解しています。
+          <br />
+          そのため、標準的なソリューションではなく、お客様の特定のニーズに合わせたパーソナライズされたアプローチを取ります。
           </GridListItem>
         </GridList>
       </Container>
@@ -236,9 +225,9 @@ export default function Process() {
     <>
       <PageIntro eyebrow="Our business" title="事業紹介">
         <p>
-        私たちは、革新と信頼性を重視し、お客様一人ひとりに合わせたカスタマイズされたソリューションを提供することで、新しい可能性を切り拓いています。
-        <br />
-        以下に、私たちの主要な事業領域をご紹介します。
+          私たちは、革新と信頼性を重視し、お客様一人ひとりに合わせたカスタマイズされたソリューションを提供することで、新しい可能性を切り拓いています。
+          <br />
+          以下に、私たちの主要な事業領域をご紹介します。
         </p>
       </PageIntro>
 

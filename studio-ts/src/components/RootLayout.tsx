@@ -82,7 +82,7 @@ function Header({
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
-            Contact us
+            お問い合わせ
           </Button>
           <button
             ref={toggleRef}
@@ -148,7 +148,8 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">事業紹介</NavigationItem>
-        <NavigationItem href="/blog">ブログ</NavigationItem>
+        {/* ブログへナビ */}
+        {/* <NavigationItem href="/blog">ブログ</NavigationItem> */}
       </NavigationRow>
     </nav>
   )
@@ -228,7 +229,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               />
             </div>
             <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
+            {/* SNSと住所 */}
+            {/* <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
@@ -248,7 +250,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                   </div>
                 </div>
               </Container>
-            </div>
+            </div> */}
           </motion.div>
         </motion.div>
       </header>

@@ -7,7 +7,7 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
-    title: 'Work',
+    title: '実績',
     links: [
       { title: 'FamilyFund', href: '/work/family-fund' },
       { title: 'Unseal', href: '/work/unseal' },
@@ -23,7 +23,7 @@ const navigation = [
     ],
   },
   {
-    title: 'Company',
+    title: '会社概要',
     links: [
       { title: 'About', href: '/about' },
       { title: 'Process', href: '/process' },
@@ -31,10 +31,10 @@ const navigation = [
       { title: 'Contact us', href: '/contact' },
     ],
   },
-  {
-    title: 'Connect',
-    links: socialMediaProfiles,
-  },
+  // {
+  //   title: 'Connect',
+  //   links: socialMediaProfiles,
+  // },
 ]
 
 function Navigation() {

@@ -1,0 +1,57 @@
+import logo from '@/images/clients/family-fund/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageDebraFiscal from './debra-fiscal.jpg'
+
+export const caseStudy = {
+  client: '洒落株式会社',
+  title: '洒落株式会社',
+  description:
+    '洒落株式会社は、個性的なカフェを展開し、顧客に印象深い体験を提供するために、私たちのデジタルマーケティングとウェブ開発サービスを活用しました。',
+  summary: [
+    '洒落株式会社は、個性的なカフェを展開し、顧客に印象深い体験を提供するために、私たちのデジタルマーケティングとウェブ開発サービスを活用しました。',
+    '彼らは、ブランドの認知度を高めるとともに、顧客とのつながりを深めるために、私たちのデジタルソリューションを採用しました。',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2023-06',
+  service: 'ウェブ開発、デジタルサイネージ広告、Tappi',
+  testimonial: {
+    author: { name: 'Debra Fiscal', role: '株式会社取締役' },
+    content:
+      '感想',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} 実績`,
+  description: caseStudy.description,
+}
+
+## プロジェクト概要
+
+洒落株式会社は、彼らのユニークなカフェブランドを際立たせ、より多くの顧客との接点を持つために、以下のような複数のデジタルソリューションを導入しました。
+
+## 挑戦した事
+
+<TagList>
+  <TagListItem>Tappi導入</TagListItem>
+  <TagListItem>デジタルサイネージ広告</TagListItem>
+  <TagListItem>SEO</TagListItem>
+  <TagListItem>ウェブサイト作成</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Debra Fiscal', role: 'CEO of FamilyFund' }}
+  image={{ src: imageDebraFiscal }}
+>
+  Working with Studio, we felt more like a partner than a customer. They really
+  resonated with our mission to change the way people convince their parents to
+  cash out their pensions.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="25%" label="Less traffic" />
+  <StatListItem value="10x" label="Page load times" />
+  <StatListItem value="15%" label="Higher infra costs" />
+  <StatListItem value="$1.2M" label="Legal fees" />
+</StatList>

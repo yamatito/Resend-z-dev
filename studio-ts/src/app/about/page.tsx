@@ -30,27 +30,24 @@ function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Our Culture"
+        title="私たちの文化"
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+        私たちは、バランスの取れた仕事と生活を大切にする、同じ核心価値を共有する人々の集まりです。私たちのチームは以下の価値観に基づいて行動しています。
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="忠誠心" invert>
+            私たちのチームは、組織とその目標に深い忠誠心を持っています。これは私たちが提供するサービスの品質に反映されています。
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="信頼" invert>
+          互いを信じ、支え合う文化を大切にしています。私たちはチームの柔軟な働き方を支持し、最高の成果を引き出します。
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="思いやり" invert>
+          私たちは、個々のチームメンバーが直面する課題に対し、理解と支援を提供します。
           </GridListItem>
         </GridList>
       </Container>
@@ -180,8 +177,10 @@ function Team() {
   )
 }
 const tableData = [
-  { label: '商号', value: 'z-developer 合同会社' },
-  { label: '商号２', value: 'z-developer 合同会社2' },
+  { label: '商号', value: 'Zデベロッパー合同会社' },
+  { label: '代表取締役', value: '枡田 大和' },
+  { label: '設立', value: '令和5年4月7日' },
+  { label: '事業内容', value: 'ウェブサイト・コンテンツ利用の各種サービスの設計・企画・制作' },
   // 他のデータ項目も同様に追加
 ];
 function Table() {
@@ -191,7 +190,7 @@ function Table() {
         <FadeIn>
           {tableData.map((dataItem, index) => (
             <article key={index}>
-              <Border className="pt-16">
+              <Border className="py-4">
                 <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                   <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
                     <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
@@ -221,7 +220,7 @@ function Table() {
 export const metadata: Metadata = {
   title: '会社概要',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    '私たちは、革新的なアプローチとプログラマー主導の開発哲学を信じています。',
 }
 
 export default async function About() {
@@ -231,15 +230,11 @@ export default async function About() {
     <>
       <PageIntro eyebrow="Company" title="会社概要">
         <p>
-          私たちは、プログラマーが主体となる効果的なアプローチを信じています。
+        私たちは、革新的なアプローチとプログラマー主導の開発哲学を信じています。
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            プログラマーたちは経験と専門知識を蓄積し、開発プロセスを迅速かつ品質の高いものに保っています。
-          </p>
-          <p>
-            これにより、プロジェクトの開発からメンテナンスまでの一貫性が確保され、クライアントの要望に的確に対応できるのです。
-            これが私たちのアプローチの中心にある考え方であり、クライアントの期待を超える価値を追求し続けています。
+          経験豊富なプログラマーたちが、迅速かつ高品質なソリューションを提供し、クライアントの期待を超える価値を追求し続けています。
           </p>
         </div>
       </PageIntro>
@@ -253,14 +248,14 @@ export default async function About() {
 
       <Culture />
       <Table />
-      <Team />
-
+      {/* <Team /> */}
+{/* 
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="From the blog"
         intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
         pages={blogArticles}
-      />
+      /> */}
 
       <ContactSection />
     </>

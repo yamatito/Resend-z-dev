@@ -191,23 +191,22 @@ function ContactDetails() {
   return (
     <FadeIn>
       <h2 className="font-display text-base font-semibold text-neutral-950">
-        Our offices
+      メールでのお問い合わせ
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
+      ご質問やプロジェクトについてのお問い合わせは、以下のフォームをご利用ください。必要な情報を入力の上、送信してください。担当者が迅速に対応いたします。
       </p>
 
-      <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
+      {/* <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" /> */}
 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Email us
+          以下のメールアドレスにも直接ご連絡いただけます。
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
+            ['本社メールアドレス', 'contact@zdev.co.jp'],
+            // ['Press', 'press@studioagency.com'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
@@ -223,13 +222,13 @@ function ContactDetails() {
           ))}
         </dl>
       </Border>
-
+{/* 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Follow us
         </h2>
         <SocialMedia className="mt-6" />
-      </Border>
+      </Border> */}
     </FadeIn>
   )
 }
@@ -242,8 +241,8 @@ function ContactDetails() {
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      <PageIntro eyebrow="Contact us" title="お問い合わせ">
+        <p>私たちと一緒に素晴らしいものを作りましょう。皆様からのご連絡をお待ちしております。</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">

@@ -178,9 +178,9 @@ function Team() {
 }
 const tableData = [
   { label: '商号', value: 'Zデベロッパー合同会社' },
-  { label: '代表取締役', value: '枡田 大和' },
   { label: '設立', value: '令和5年4月7日' },
   { label: '事業内容', value: 'ウェブサイト・コンテンツ利用の各種サービスの設計・企画・制作' },
+  { label: '代表取締役', value: '枡田 大和' },
   // 他のデータ項目も同様に追加
 ];
 function Table() {

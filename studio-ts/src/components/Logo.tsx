@@ -21,7 +21,7 @@ export function Logomark({
       className={clsx(
         'h-8 transition-all duration-300 ',
         invert ? 'fill-white' : 'fill-neutral-950',
-        filled ? 'w-full h-full' : 'w-0 group-hover/logo:w-8 ',
+        filled ? 'w-full h-full' : 'w-0 group-hover/logo:w-full h-full ',
       )}
     />
     <use
